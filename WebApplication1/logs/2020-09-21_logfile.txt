@@ -1,0 +1,277 @@
+2020-09-21 18:56:19.7623 WARN Unauthorized User credentials is not a valid
+2020-09-21 18:56:21.2804 ERROR Unauthorized User credentials is not a valid
+2020-09-21 18:58:19.3778 WARN Unauthorized User credentials is not a valid
+2020-09-21 18:58:19.5758 WARN ::1
+2020-09-21 18:58:19.5758 ERROR Unauthorized User credentials is not a valid
+2020-09-21 18:59:21.0711 WARN Unauthorized User credentials is not a valid
+2020-09-21 18:59:21.2011 WARN Remote IP Client: ::1
+2020-09-21 18:59:21.2011 ERROR Unauthorized User credentials is not a valid
+2020-09-21 19:00:35.5269 INFO Here is info message from the controller.
+2020-09-21 19:00:36.4880 DEBUG Here is debug message from the controller.
+2020-09-21 19:00:37.3110 WARN Here is warn message from the controller.
+2020-09-21 19:00:38.1370 ERROR Here is error message from the controller.
+2020-09-21 19:07:27.0880 WARN Unauthorized User credentials is not a valid
+2020-09-21 19:07:28.3690 WARN Remote IP Client: ::1
+2020-09-21 19:07:29.3730 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 19:07:30.3990 WARN client language: en-US
+2020-09-21 19:07:31.4340 ERROR Unauthorized User credentials is not a valid
+2020-09-21 19:22:12.0353 ERROR IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 13:52:11'.
+2020-09-21 19:22:12.5413 ERROR    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 107
+2020-09-21 19:22:28.1692 WARN Unauthorized User credentials is not a valid
+2020-09-21 19:22:28.1692 WARN Remote IP Client: ::1
+2020-09-21 19:22:28.2422 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 19:22:28.2722 WARN client language: en-US
+2020-09-21 19:22:28.2762 ERROR Unauthorized User credentials is not a valid
+2020-09-21 19:23:08.2997 ERROR IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 13:52:59'.
+2020-09-21 19:23:11.1297 ERROR    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 107
+2020-09-21 19:23:13.7347 WARN Unauthorized User credentials is not a valid
+2020-09-21 19:23:13.7547 WARN Remote IP Client: ::1
+2020-09-21 19:23:13.7547 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 19:23:13.7547 WARN client language: en-US
+2020-09-21 19:23:13.7547 ERROR Unauthorized User credentials is not a valid
+2020-09-21 19:44:22.5799 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:14:22'.
+2020-09-21 19:44:22.8229 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 19:44:22.9589 WARN Unauthorized User credentials is not a valid
+2020-09-21 19:44:26.6111 WARN Remote IP Client: ::1
+2020-09-21 19:44:29.3673 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 19:44:31.9634 WARN client language: en-US
+2020-09-21 19:48:32.5041 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:18:32'.
+2020-09-21 19:48:32.7571 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 19:48:32.8891 WARN Unauthorized User credentials is not a valid
+2020-09-21 19:48:32.9151 WARN Remote IP Client: ::1
+2020-09-21 19:48:32.9191 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 19:48:32.9191 WARN client language: en-US
+2020-09-21 19:52:53.5241 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:22:53'.
+2020-09-21 19:52:53.7671 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 19:52:53.9111 WARN Unauthorized User credentials is not a valid
+2020-09-21 19:52:53.9411 WARN Remote IP Client: ::1
+2020-09-21 19:52:53.9411 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 19:52:53.9411 WARN client language: en-US
+2020-09-21 20:03:11.3374 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:33:10'.
+2020-09-21 20:03:11.5844 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:03:11.7144 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:03:11.7454 WARN Remote IP Client: ::1
+2020-09-21 20:03:11.7504 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:03:11.7504 WARN client language: en-US
+2020-09-21 20:05:02.0518 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:35:01'.
+2020-09-21 20:05:02.2768 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:05:02.4008 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:05:02.4248 WARN Remote IP Client: ::1
+2020-09-21 20:05:02.4248 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:05:02.4348 WARN client language: en-US
+2020-09-21 20:05:02.4618 WARN client Unknown: 
+2020-09-21 20:05:02.4618 ERROR Unauthorized User credentials is not a valid
+2020-09-21 20:06:01.0051 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:36:00'.
+2020-09-21 20:06:01.2371 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:06:01.3651 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:06:01.3891 WARN Remote IP Client: ::1
+2020-09-21 20:06:01.3891 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:06:01.3891 WARN client language: en-US
+2020-09-21 20:06:01.4291 WARN client Unknown: 
+2020-09-21 20:06:01.4291 ERROR Unauthorized User credentials is not a valid
+2020-09-21 20:09:26.4987 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:39:26'.
+2020-09-21 20:09:26.7167 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:09:26.8527 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:09:26.8767 WARN Remote IP Client: ::1
+2020-09-21 20:09:26.8767 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:09:26.8767 WARN client language: en-US
+2020-09-21 20:09:26.9737 WARN client Unknown: 
+2020-09-21 20:09:26.9737 ERROR Unauthorized User credentials is not a valid
+2020-09-21 20:17:08.6809 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:47:08'.
+2020-09-21 20:17:08.9460 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:17:09.0770 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:17:09.1000 WARN Remote IP Client: ::1
+2020-09-21 20:17:09.1050 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:17:09.1050 WARN client language: en-US
+2020-09-21 20:17:09.1640 WARN client Unknown: 
+2020-09-21 20:17:09.1640 ERROR Unauthorized User credentials is not a valid
+2020-09-21 20:18:00.1524 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:47:56'.
+2020-09-21 20:18:01.2554 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:18:20.3694 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:18:21.4104 WARN Remote IP Client: ::1
+2020-09-21 20:18:22.5035 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:18:23.5385 WARN client language: en-US
+2020-09-21 20:23:55.5586 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:53:55'.
+2020-09-21 20:23:55.8106 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:23:55.9436 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:23:55.9686 WARN Remote IP Client: ::1
+2020-09-21 20:23:55.9686 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:23:55.9686 WARN client language: en-US
+2020-09-21 20:23:56.0516 WARN client Unknown: 
+2020-09-21 20:23:56.0516 ERROR Unauthorized User credentials is not a valid
+2020-09-21 20:24:39.7161 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:54:39'.
+2020-09-21 20:24:39.7361 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:24:39.8922 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:24:39.8922 WARN Remote IP Client: ::1
+2020-09-21 20:24:39.8922 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:24:39.8992 WARN client language: en-US
+2020-09-21 20:29:22.2868 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 14:59:21'.
+2020-09-21 20:29:22.5508 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:29:22.6908 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:29:22.7238 WARN Remote IP Client: ::1
+2020-09-21 20:29:22.7298 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:29:22.7298 WARN client language: en-US
+2020-09-21 20:30:06.6003 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:00:06'.
+2020-09-21 20:30:06.6223 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:30:06.7463 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:30:06.7463 WARN Remote IP Client: ::1
+2020-09-21 20:30:06.7533 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:30:06.7533 WARN client language: en-US
+2020-09-21 20:30:21.0130 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:00:20'.
+2020-09-21 20:30:21.0130 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:30:21.1250 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:30:21.1250 WARN Remote IP Client: ::1
+2020-09-21 20:30:21.1250 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:30:21.1250 WARN client language: en-US
+2020-09-21 20:30:37.0388 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:00:36'.
+2020-09-21 20:30:37.0388 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:30:37.2438 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:30:37.2938 WARN Remote IP Client: ::1
+2020-09-21 20:30:37.3138 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:30:37.3138 WARN client language: en-US
+2020-09-21 20:31:02.3400 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:01:02'.
+2020-09-21 20:31:02.3550 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:31:02.5100 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:31:02.5100 WARN Remote IP Client: ::1
+2020-09-21 20:31:02.5100 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:31:02.5100 WARN client language: en-US
+2020-09-21 20:31:19.6039 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:01:19'.
+2020-09-21 20:31:19.6039 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:31:19.7209 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:31:19.7209 WARN Remote IP Client: ::1
+2020-09-21 20:31:19.7209 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:31:19.7289 WARN client language: en-US
+2020-09-21 20:32:20.9224 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:02:20'.
+2020-09-21 20:32:21.1514 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:32:21.2764 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:32:21.2984 WARN Remote IP Client: ::1
+2020-09-21 20:32:21.3034 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:32:21.3034 WARN client language: en-US
+2020-09-21 20:32:29.0568 WARN client Unknown: 
+2020-09-21 20:32:29.0568 ERROR Unauthorized User credentials is not a valid
+2020-09-21 20:35:20.6646 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:05:20'.
+2020-09-21 20:35:20.8896 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:35:21.0096 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:35:21.0346 WARN Remote IP Client: ::1
+2020-09-21 20:35:21.0346 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:35:21.0346 WARN client language: en-US
+2020-09-21 20:35:21.1426 WARN client Unknown: 
+2020-09-21 20:35:21.1426 ERROR Unauthorized User credentials is not a valid
+2020-09-21 20:35:36.6422 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:05:36'.
+2020-09-21 20:35:36.6572 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:35:36.8282 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:35:36.8282 WARN Remote IP Client: ::1
+2020-09-21 20:35:36.8352 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:35:36.8352 WARN client language: en-US
+2020-09-21 20:35:36.9632 WARN client Unknown: 
+2020-09-21 20:35:36.9632 ERROR Unauthorized User credentials is not a valid
+2020-09-21 20:39:17.8912 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:09:17'.
+2020-09-21 20:39:18.1872 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:39:18.2773 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:39:18.3283 WARN Remote IP Client: ::1
+2020-09-21 20:39:18.3793 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:39:18.3793 WARN client language: en-US
+2020-09-21 20:39:18.4453 ERROR Unauthorized User credentials is not a valid
+2020-09-21 20:46:28.8481 ERROR Message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '09/15/2020 06:43:08', Current time: '09/21/2020 15:16:28'.
+2020-09-21 20:46:29.0071 ERROR StackTrace:    at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at WebApplication1.Service.AuthService.GetPrincipal(String token) in F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\Service\AuthService.cs:line 116
+2020-09-21 20:46:29.0441 WARN Unauthorized User credentials is not a valid
+2020-09-21 20:46:29.0621 WARN Remote IP Client: ::1
+2020-09-21 20:46:29.0621 WARN client useragent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML
+2020-09-21 20:46:29.0621 WARN client language: en-US
+2020-09-21 20:46:29.1091 ERROR Unauthorized User credentials is not a valid
