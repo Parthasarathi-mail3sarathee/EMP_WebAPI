@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\XUnitTestEmployee.deps.json
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\XUnitTestEmployee.runtimeconfig.json
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\XUnitTestEmployee.runtimeconfig.dev.json
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\XUnitTestEmployee.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\XUnitTestEmployee.pdb
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\WebApplication1.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\bin\Debug\netcoreapp2.1\WebApplication1.pdb
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\obj\Debug\netcoreapp2.1\XUnitTestEmployee.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\obj\Debug\netcoreapp2.1\XUnitTestEmployee.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\obj\Debug\netcoreapp2.1\XUnitTestEmployee.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\obj\Debug\netcoreapp2.1\XUnitTestEmployee.AssemblyInfo.cs
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\obj\Debug\netcoreapp2.1\XUnitTestEmployee.csproj.CopyComplete
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\obj\Debug\netcoreapp2.1\XUnitTestEmployee.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestEmployee\obj\Debug\netcoreapp2.1\XUnitTestEmployee.pdb

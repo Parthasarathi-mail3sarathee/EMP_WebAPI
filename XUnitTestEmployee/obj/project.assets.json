@@ -9267,11 +9267,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\XUnitTestProject1\\XUnitTestProject1.csproj",
-      "projectName": "XUnitTestProject1",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\XUnitTestProject1\\XUnitTestProject1.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\XUnitTestEmployee\\XUnitTestEmployee.csproj",
+      "projectName": "XUnitTestEmployee",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\XUnitTestEmployee\\XUnitTestEmployee.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\XUnitTestProject1\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\XUnitTestEmployee\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

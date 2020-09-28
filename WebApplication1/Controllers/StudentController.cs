@@ -42,24 +42,24 @@ namespace WebApplication1.Controllers
             _logger.LogWarn("Here is warn message from the controller.");
             _logger.LogError("Here is error message from the controller.");
 
-            var empinfo = await _studentService.GetAllStudentAsync(ct);
-            if (empinfo == null)
+            var studinfo = await _studentService.GetAllStudentAsync(ct);
+            if (studinfo == null)
             {
                 return NotFound();
             }
-            return Ok(empinfo);
+            return Ok(studinfo);
         }
 
         [HttpGet]
         [Route("GetByID/{id}")]
         public async Task<IActionResult> GeByID(int id, CancellationToken ct)
         {
-            var empinfo = await _studentService.GetStudentByIDAsync(id,ct);
-            if (empinfo == null)
+            var studinfo = await _studentService.GetStudentByIDAsync(id,ct);
+            if (studinfo == null)
             {
                 return NotFound();
             }
-            return Ok(empinfo);
+            return Ok(studinfo);
         }
 
         // POST api/values
@@ -70,8 +70,8 @@ namespace WebApplication1.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var empinfo = await _studentService.AddStudent(value, ct);
-            return Created("", empinfo);
+            var studinfo = await _studentService.AddStudent(value, ct);
+            return Created("", studinfo);
         }
 
         // PUT api/values/5
@@ -91,8 +91,8 @@ namespace WebApplication1.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEmployee(int id, CancellationToken ct)
         {
-            var empinfo = await _studentService.GetStudentByIDAsync(id, ct);
-            if (empinfo == null)
+            var studinfo = await _studentService.GetStudentByIDAsync(id, ct);
+            if (studinfo == null)
             {
                 return NotFound();
             }
