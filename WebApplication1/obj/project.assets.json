@@ -12680,11 +12680,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Partha\\Code\\Emp\\EmployeeWebAPI\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "F:\\Partha\\Code\\Emp\\EmployeeWebAPI\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "F:\\Partha\\Code\\Emp\\EmployeeWebAPI\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
