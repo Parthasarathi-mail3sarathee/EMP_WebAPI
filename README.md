@@ -43,13 +43,14 @@ https://github.com/Parthasarathi-mail3sarathee/EMP_WebAPI/blob/master/WebApplica
 
 User Repository contains the following users
 Roles in our application are in code
-//Master Info
-	            Roles.Add(new Role { ID = 1, Name = "Student", Description = "" });
-	            Roles.Add(new Role { ID = 2, Name = "Leader", Description = "" });
-	            Roles.Add(new Role { ID = 3, Name = "Teacher", Description = "" });
-	            Roles.Add(new Role { ID = 4, Name = "Staff", Description = "" });
-	            Roles.Add(new Role { ID = 5, Name = "SuperUser", Description = "" });
 
+	            //Role Mater Info  
+	            Roles.Add(new Role { ID = 1, Name = "Student", Description = "" });;
+	            Roles.Add(new Role { ID = 2, Name = "Leader", Description = "" });
+		    Roles.Add(new Role { ID = 3, Name = "Teacher", Description = "" });
+		    Roles.Add(new Role { ID = 4, Name = "Staff", Description = "" });
+		    Roles.Add(new Role { ID = 5, Name = "SuperUser", Description = "" });
+		    
 
 
 	            //User Info  
@@ -67,8 +68,7 @@ Roles in our application are in code
 	UserRoles.Add(new UserRole { ID = 1, roleID = 1, userID = 2 });// Name = "Raman", Role=” Student”
 	UserRoles.Add(new UserRole { ID = 2, roleID = 2, userID = 2 });// Name = "Raman"", Role=” Leader”
 	
-	
-UserRoles.Add(new UserRole { ID = 3, roleID = 3, userID = 1 });// Name = "Raju", Role=” Teacher”
+	UserRoles.Add(new UserRole { ID = 3, roleID = 3, userID = 1 });// Name = "Raju", Role=” Teacher”
 	UserRoles.Add(new UserRole { ID = 4, roleID = 4, userID = 1 });// Name = "Raju", Role=” Staff”
 	UserRoles.Add(new UserRole { ID = 5, roleID = 5, userID = 1 });// Name = "Raju", Role=” SuperUser”
 
