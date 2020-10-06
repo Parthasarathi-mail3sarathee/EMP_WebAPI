@@ -21,18 +21,25 @@ Implementations are
 It is a singleton in memory database 
 https://github.com/Parthasarathi-mail3sarathee/EMP_WebAPI/tree/master/WebApplication1/DB
 
+
 Let’s consider the working of Student REST API
 https://github.com/Parthasarathi-mail3sarathee/EMP_WebAPI/blob/master/WebApplication1/Controllers/StudentController.cs
+
 
 In our application we have 5 different roles they are; (Student, Leader, Teacher, Staff, SuperUser)
 In our application we have 3 users with the role combination
 
+
 Sankar(Role: Student)
+
 Raman(Role: Student, Leader)
+
 Raju(Role: Teacher, Staff, SuperUser)
+
 
 in memory database for users
 https://github.com/Parthasarathi-mail3sarathee/EMP_WebAPI/blob/master/WebApplication1/DB/SingletonUserRepo.cs
+
 
 User Repository contains the following users
 Roles in our application are in code
