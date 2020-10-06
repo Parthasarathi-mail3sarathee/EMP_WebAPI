@@ -77,12 +77,18 @@ Roles in our application are in code
 
 
 
-1)	Getting token for the above users 
+1)	Getting token for the above users
+
 https://localhost:44379/api/token
 
+
 Sankar(Role: Student)
+
 Raman(Role: Student, Leader)
+
 Raju(Role: Teacher, Staff, SuperUser)
+
+
 
 
 request
@@ -98,7 +104,10 @@ Postman-Token: b27b8044-6888-7867-1c45-60554fea180a
         "username": "sankar@test.com",
         "password": "student"
     }
+    
+    
 C#
+
 
 
 var client = new RestClient("https://localhost:44379/api/token");
@@ -109,24 +118,40 @@ request.AddHeader("content-type", "application/json");
 request.AddParameter("application/json", "   {\n        \"username\": \"sankar@test.com\",\n        \"password\": \"student\"\n    }", ParameterType.RequestBody);
 IRestResponse response = client.Execute(request);
 
+
+
 Response 
+
 Status OK(200)
+
 
 Header:
 access-control-allow-origin →*
+
 content-type →application/json; charset=utf-8
+
 date →Tue, 06 Oct 2020 13:32:05 GMT
+
 server →Kestrel
+
 transfer-encoding →chunked
+
 x-powered-by →ASP.NET
+
 x-sourcefiles →=?UTF-8?B?QzpcVXNlcnNcQWRtaW5cc291cmNlXHJlcG9zXEVNUF9XZWJBUElcV2ViQXBwbGljYXRpb24xXGFwaVx0b2tlbg==?=
+
+
+
 
 Body:
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYzYxZjA1MC05ZGQyLTQxZTEtODg2Zi1iZjI0NGI3NmFhNTEiLCJuYW1lIjoic2Fua2FyQHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InNhbmthckB0ZXN0LmNvbSIsImV4cCI6MTYwMjA3NzUyNSwiaXNzIjoiaHR0cDovL215c2l0ZS5jb20iLCJhdWQiOiJodHRwOi8vbXlzaXRlLmNvbSJ9.i9ZFmc5i-rgQVSKQiI-g4gk5WppIytzg_4cnGm-wM_Q"
 }
+
 request
+
 For user Raman
+
 
 POST /api/token HTTP/1.1
 Host: localhost:44379
@@ -139,6 +164,8 @@ Postman-Token: 691cac72-18e8-61c5-716d-50ebf01e6e7a
         "password": "Lead"
     }
 
+
+
 C#
 var client = new RestClient("https://localhost:44379/api/token");
 var request = new RestRequest(Method.POST);
@@ -150,10 +177,16 @@ IRestResponse response = client.Execute(request);
 
 
 
+
+
 Response 
+
 Status OK(200)
 
+
+
 Header:
+
 access-control-allow-origin →*
 content-type →application/json; charset=utf-8
 date →Tue, 06 Oct 2020 13:34:52 GMT
@@ -162,14 +195,22 @@ transfer-encoding →chunked
 x-powered-by →ASP.NET
 x-sourcefiles →=?UTF-8?B?QzpcVXNlcnNcQWRtaW5cc291cmNlXHJlcG9zXEVNUF9XZWJBUElcV2ViQXBwbGljYXRpb24xXGFwaVx0b2tlbg==?=
 
+
+
 Body:
+
+
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYmMyNGExNS05YWYxLTQyYjUtYjMwNC03Mjk2ODQxNjM2OTIiLCJuYW1lIjoidGVzdEB0ZXN0LmNvbSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJ0ZXN0QHRlc3QuY29tIiwiZXhwIjoxNjAyMDc3NjkyLCJpc3MiOiJodHRwOi8vbXlzaXRlLmNvbSIsImF1ZCI6Imh0dHA6Ly9teXNpdGUuY29tIn0.lcfzyVZRDoz9Me850Zb-P5HlCUuYMLBRZJrqOia3bKQ"
 }
 
 
+
+
 request
+
 For user Raju
+
 
 POST /api/token HTTP/1.1
 Host: localhost:44379
@@ -183,7 +224,10 @@ Postman-Token: ef93bb9a-16fa-2e44-838f-b5a10e07be19
     }
 
 
+
+
 In C#
+
 
 var client = new RestClient("https://localhost:44379/api/token");
 var request = new RestRequest(Method.POST);
@@ -195,9 +239,14 @@ IRestResponse response = client.Execute(request);
 
 
 
+
+
 Response 
+
 Status OK(200)
+
 Header:
+
 access-control-allow-origin →*
 content-type →application/json; charset=utf-8
 date →Tue, 06 Oct 2020 13:39:21 GMT
@@ -207,7 +256,10 @@ x-powered-by →ASP.NET
 x-sourcefiles →=?UTF-8?B?QzpcVXNlcnNcQWRtaW5cc291cmNlXHJlcG9zXEVNUF9XZWJBUElcV2ViQXBwbGljYXRpb24xXGFwaVx0b2tlbg==?=
 
 
+
+
 Body:
+
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0N2FkZGJjNS03ZWI3LTQ2ZWItOTA1OC0yMmIyNjFhY2I2NGEiLCJuYW1lIjoidGVzdDFAdGVzdC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdDFAdGVzdC5jb20iLCJleHAiOjE2MDIwNzc5NjEsImlzcyI6Imh0dHA6Ly9teXNpdGUuY29tIiwiYXVkIjoiaHR0cDovL215c2l0ZS5jb20ifQ.t2y-_zqH1nSm9Vk82DVYPjhH7polMim8sYB-VfSFmDg"
 }
@@ -215,15 +267,24 @@ Body:
 
 
 
+
+
 2)	Getting get all students for the controller  for the different users from the response toke https://localhost:44379/api/Student/Getall
+
+
 
 Sankar(Role: Student)
 Raman(Role: Student, Leader)
 Raju(Role: Teacher, Staff, SuperUser)
 
 
+
 For user Sankar
+
+
 request
+
+
 GET /api/Student/Getall HTTP/1.1
 Host: localhost:44379
 Content-Type: application/json
@@ -231,7 +292,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYzYxZjA1M
 Cache-Control: no-cache
 Postman-Token: 3af7cb93-33af-33a7-47a1-9626fad34542
 
+
+
 In C#
+
+
 var client = new RestClient("https://localhost:44379/api/Student/Getall");
 var request = new RestRequest(Method.GET);
 request.AddHeader("postman-token", "9d2738c3-d07d-6fcd-2f00-d1b5a2bd9a62");
@@ -239,12 +304,17 @@ request.AddHeader("cache-control", "no-cache");
 request.AddHeader("authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYzYxZjA1MC05ZGQyLTQxZTEtODg2Zi1iZjI0NGI3NmFhNTEiLCJuYW1lIjoic2Fua2FyQHRlc3QuY29tIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InNhbmthckB0ZXN0LmNvbSIsImV4cCI6MTYwMjA3NzUyNSwiaXNzIjoiaHR0cDovL215c2l0ZS5jb20iLCJhdWQiOiJodHRwOi8vbXlzaXRlLmNvbSJ9.i9ZFmc5i-rgQVSKQiI-g4gk5WppIytzg_4cnGm-wM_Q");
 request.AddHeader("content-type", "application/json");
 request.AddParameter("application/json", "   {\n        \"username\": \"test@test.com\",\n        \"password\": \"Lead\"\n    }", ParameterType.RequestBody);
-IRestResponse response = client.Execute(request);
+IRestResponse response = client.Execute(request
+
+
 
 
 Response 
+
 Status Unauthroized(401)
-Header:
+
+Header
+
 content-length →0
 date →Tue, 06 Oct 2020 13:44:45 GMT
 server →Kestrel
@@ -252,11 +322,15 @@ x-powered-by →ASP.NET
 x-sourcefiles →=?UTF-8?B?QzpcVXNlcnNcQWRtaW5cc291cmNlXHJlcG9zXEVNUF9XZWJBUElcV2ViQXBwbGljYXRpb24xXGFwaVxTdHVkZW50XEdldGFsbA==?=
 
 
+
 Body:
 
 
+
 request
+
 For user Raman
+
 
 GET /api/Student/Getall HTTP/1.1
 Host: localhost:44379
@@ -265,7 +339,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYmMyNGExN
 Cache-Control: no-cache
 Postman-Token: 52e5ac87-e437-70f3-869f-17a7a86f462f
 
+
+
 In c#
+
 
 var client = new RestClient("https://localhost:44379/api/Student/Getall");
 var request = new RestRequest(Method.GET);
@@ -277,9 +354,14 @@ request.AddParameter("application/json", "   {\n        \"username\": \"test@tes
 IRestResponse response = client.Execute(request);
 
 
+
+
 Response 
+
 Status Ok(200)
+
 Header:
+
 content-type →application/json; charset=utf-8
 date →Tue, 06 Oct 2020 13:50:04 GMT
 server →Kestrel
@@ -288,7 +370,10 @@ x-powered-by →ASP.NET
 x-sourcefiles →=?UTF-8?B?QzpcVXNlcnNcQWRtaW5cc291cmNlXHJlcG9zXEVNUF9XZWJBUElcV2ViQXBwbGljYXRpb24xXGFwaVxTdHVkZW50XEdldGFsbA==?=
 
 
+
+
 Body:
+
 [
     {
         "name": "Raman",
@@ -318,8 +403,12 @@ Body:
 
 
 
+
+
 request
+
 For user Raju
+
 
 GET /api/Student/Getall HTTP/1.1
 Host: localhost:44379
@@ -328,7 +417,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0N2FkZGJjN
 Cache-Control: no-cache
 Postman-Token: 40676b5a-6910-deac-53b3-f303297280aa
 
+
+
+
 In C#
+
 
 var client = new RestClient("https://localhost:44379/api/Student/Getall");
 var request = new RestRequest(Method.GET);
@@ -339,9 +432,14 @@ request.AddHeader("content-type", "application/json");
 request.AddParameter("application/json", "   {\n        \"username\": \"test@test.com\",\n        \"password\": \"Lead\"\n    }", ParameterType.RequestBody);
 IRestResponse response = client.Execute(request);
 
+
+
 Response 
+
 Status Ok(200)
+
 Header:
+
 content-type →application/json; charset=utf-8
 date →Tue, 06 Oct 2020 13:56:11 GMT
 server →Kestrel
@@ -350,7 +448,10 @@ x-powered-by →ASP.NET
 x-sourcefiles →=?UTF-8?B?QzpcVXNlcnNcQWRtaW5cc291cmNlXHJlcG9zXEVNUF9XZWJBUElcV2ViQXBwbGljYXRpb24xXGFwaVxTdHVkZW50XEdldGFsbA==?=
 
 
+
+
 Body:
+
 [
     {
         "name": "Raman",
@@ -377,6 +478,9 @@ Body:
         "isActive": true
     }
 ]
+
+
+
 
 
 
