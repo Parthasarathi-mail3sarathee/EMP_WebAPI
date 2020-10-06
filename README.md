@@ -6,11 +6,17 @@ https://github.com/Parthasarathi-mail3sarathee/EMP_WebAPI
 
 To summarize the above things. It is a sample back-end application of student REST API in .Net WebAPI Core.
 Implementations are
+
 •	Rest API in .Net WebAPI Core (Get,POST,PUT,DELETE) (Student Controller)
+
 •	singleton in memory database (Users and its role access to student controller )
+
 •	Token Based authentication
+
 •	Sample authorization and authentication for single Get Method
+
 •	Logging the request headers of unauthorized access for security purpose.
+
 
 It is a singleton in memory database 
 https://github.com/Parthasarathi-mail3sarathee/EMP_WebAPI/tree/master/WebApplication1/DB
