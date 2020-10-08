@@ -44,12 +44,10 @@ namespace WebApplication1.Filters
 
         public async Task<IPrincipal> AuthenticateJwtToken(string token)
         {
-            token = token.Split(' ')[1];
-            string username;
             try
             {
-
-
+                token = token.Split(' ')[1];
+                string username;
                 if (ValidateToken(token, out username))
                 {
                     // based on username to get more information from database 
@@ -73,7 +71,7 @@ namespace WebApplication1.Filters
                     return user;
                 }
             }
-            catch 
+            catch
             {
                 return null;
             }
@@ -92,6 +90,17 @@ namespace WebApplication1.Filters
             return Task.FromResult(false);
         }
 
+        public bool AuthorizeUserClaim(IPrincipal user, List<string> permissionto)
+        {
+            foreach (var per in permissionto)
+            {
+                if (user.IsInRole(per))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 
 }

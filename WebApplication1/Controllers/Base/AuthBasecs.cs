@@ -34,7 +34,7 @@ namespace WebApplication1.Controllers.Base
                 _logger.LogWarn("Remote IP Client: "+ GetRemoteIP());
                 _logger.LogWarn("client useragent: " + GetUserAgent());
                 _logger.LogWarn("client language: " + GetUserLanguage());
-                 GetUnknown();//log custom header in a log file logHeader_Each_Request_
+                 GetUnknown();//log custom header in a log file log unauthorized request of each Header of Each Request
                 _logger.LogError(msg);
                 return msg;
             }

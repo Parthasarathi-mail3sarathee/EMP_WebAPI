@@ -15,14 +15,14 @@ namespace WebApplication1.Controllers
     [ApiController]
     [EnableCors("AllowAllHeaders")]
     //[IdentityBasicAuthentication]
-    public class StudentController :  AuthBase
+    public class StudentController : AuthBase
     {
 
         private readonly ILoggerManager _logger;
         private readonly IStudentService _studentService;
-       
 
-        public StudentController(ILoggerManager logger, IStudentService studentService, IHttpContextAccessor httpContextAccessor, IBaseAuth baseAuth) :base(logger,httpContextAccessor, baseAuth)
+
+        public StudentController(ILoggerManager logger, IStudentService studentService, IHttpContextAccessor httpContextAccessor, IBaseAuth baseAuth) : base(logger, httpContextAccessor, baseAuth)
         {
             _studentService = studentService;
             _logger = logger;
@@ -51,6 +51,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet]
+        [ClaimRequirement(new string[] { "Leader", "Teacher" })]
         [Route("GetByID/{id}")]
         public async Task<IActionResult> GeByID(int id, CancellationToken ct)
         {

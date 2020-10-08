@@ -41,6 +41,12 @@ namespace WebApplication1.Filters
 
             return ip;
         }
+
+        internal static string GetUserLanguage()
+        {
+            throw new NotImplementedException();
+        }
+
         public static string ClientLanguage(bool tryUseXForwardHeader = true)
         {
             string lang = null;

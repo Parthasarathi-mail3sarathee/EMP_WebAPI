@@ -12,5 +12,6 @@ namespace WebApplication1.Filters
     {
         Task<IPrincipal> AuthenticateJwtToken(string token);
         Task<bool> AuthorizeUser(IPrincipal user, List<string> permissionto);
+        bool AuthorizeUserClaim(IPrincipal user, List<string> permissionto);
     }
 }
