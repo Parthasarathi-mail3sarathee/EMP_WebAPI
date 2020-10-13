@@ -5,6 +5,7 @@ C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\bin\Debug\netcoreapp2.1\
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\bin\Debug\netcoreapp2.1\XUnitTestStudent.runtimeconfig.json
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\bin\Debug\netcoreapp2.1\XUnitTestStudent.runtimeconfig.dev.json
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\bin\Debug\netcoreapp2.1\XUnitTestStudent.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\bin\Debug\netcoreapp2.1\XUnitTestStudent.pdb
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\bin\Debug\netcoreapp2.1\WebApplication1.dll
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\bin\Debug\netcoreapp2.1\WebApplication1.pdb
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\obj\Debug\netcoreapp2.1\XUnitTestStudent.csprojAssemblyReference.cache
@@ -12,6 +13,5 @@ C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\obj\Debug\netcoreapp2.1\
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\obj\Debug\netcoreapp2.1\XUnitTestStudent.AssemblyInfoInputs.cache
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\obj\Debug\netcoreapp2.1\XUnitTestStudent.AssemblyInfo.cs
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\obj\Debug\netcoreapp2.1\XUnitTestStudent.csproj.CopyComplete
-C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\bin\Debug\netcoreapp2.1\XUnitTestStudent.pdb
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\obj\Debug\netcoreapp2.1\XUnitTestStudent.dll
 C:\Users\Admin\source\repos\EMP_WebAPI\XUnitTestStudent\obj\Debug\netcoreapp2.1\XUnitTestStudent.pdb

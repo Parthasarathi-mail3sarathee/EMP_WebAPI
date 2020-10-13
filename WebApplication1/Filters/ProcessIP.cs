@@ -10,7 +10,12 @@ namespace WebApplication1.Filters
 {
     public static class ProcessIP
     {
-
+        static string fileName = @"F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\logs\logHeader_Each_Request_" + DateTime.Now.ToString("dd_MM_yy") + ".txt";
+        private static LogHeaders log;
+        static ProcessIP()
+        {
+            log = new LogHeaders(fileName);
+        }
         public static IHttpContextAccessor _httpContextAccessor;
 
         public static string GetRequestIP(bool tryUseXForwardHeader = true)
@@ -71,10 +76,10 @@ namespace WebApplication1.Filters
             var headercount= _httpContextAccessor.HttpContext?.Request?.Headers?.Count;
             foreach(var key in _httpContextAccessor.HttpContext?.Request?.Headers?.Keys)
             {
-                new LogHeaders().WriteLog(DateTime.Now.ToString("dd_MM_yy_hh_mm_ss")+" " +key + " : " + _httpContextAccessor.HttpContext?.Request?.Headers[key].ToString());
+                log.WriteLog(DateTime.Now.ToString("dd_MM_yy_hh_mm_ss")+" " +key + " : " + _httpContextAccessor.HttpContext?.Request?.Headers[key].ToString());
             }
 
-            new LogHeaders().WriteLogComplete();
+            log.WriteLogComplete();
             
 
         }

@@ -81,9 +81,9 @@ namespace XUnit_Employee_TestProject1
             //Assert  
 
             Assert.Equal(200, objectResponse.StatusCode);
-            Assert.Equal(emp.ID,2);
-            Assert.Equal(emp.Name, "Raman");
-            Assert.Equal(emp.Address, "Madurai");
+            Assert.Equal(2,emp.ID);
+            Assert.Equal("Raman",emp.Name);
+            Assert.Equal("Madurai",emp.Address);
 
         }
     }

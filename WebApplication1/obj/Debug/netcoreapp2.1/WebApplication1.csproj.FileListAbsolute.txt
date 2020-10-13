@@ -33,10 +33,9 @@ C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\bin\Debug\netcoreapp2.1\W
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.RazorAssemblyInfo.cache
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.RazorAssemblyInfo.cs
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.AssemblyInfoInputs.cache
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.AssemblyInfo.cs
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.RazorTargetAssemblyInfo.cache
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.dll
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.pdb
-C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
-C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csprojAssemblyReference.cache

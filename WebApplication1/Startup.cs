@@ -16,6 +16,7 @@ using NLog;
 using Unity;
 using Unity.Lifetime;
 using WebApplication1.Filters;
+using WebApplication1.Middleware;
 using WebApplication1.Service;
 
 namespace WebApplication1
@@ -41,6 +42,7 @@ namespace WebApplication1
             });
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<ILoggerManager, LoggerManager>();
+            services.AddTransient<ILogHeaders, LogHeaders>();
             services.AddScoped<IBaseAuth, IdentityBasicAuthentication>();
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IStudentService, StudentService>();
@@ -60,6 +62,7 @@ namespace WebApplication1
             {
                 app.UseHsts();
             }
+            app.UseLoggerMiddleware();
             app.UseHttpsRedirection();
             app.UseMvc();
             app.UseCors(options => options.AllowAnyOrigin().AllowAnyHeader()

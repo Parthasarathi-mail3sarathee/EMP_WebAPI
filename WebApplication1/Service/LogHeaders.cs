@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Service
 {
-    public  class LogHeaders
+    public interface ILogHeaders
+    {
+        void WriteLog(string msg);
+        void WriteLogComplete();
+        void setFileLog(string filepath);
+
+    }
+    public  class LogHeaders: ILogHeaders
     {
         static string fileName = @"F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\logs\logHeader_Each_Request_" + DateTime.Now.ToString("dd_MM_yy") + ".txt";
       
@@ -15,7 +22,14 @@ namespace WebApplication1.Service
             //Check if the file exists
             
         }
-
+        public LogHeaders(string filepath)
+        {
+            fileName = filepath;
+        }
+        public void setFileLog(string filepath)
+        {
+            fileName = filepath;
+        }
         public void WriteLog(string msg)
         {
             if (!File.Exists(fileName))
