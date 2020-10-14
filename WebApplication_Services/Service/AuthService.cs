@@ -7,6 +7,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using WebApplication_DBA_Layer.DB;
+using WebApplication_Shared_Services;
 using WebApplication_Shared_Services.Model;
 using WebApplication_Shared_Services.Service;
 
@@ -32,7 +33,10 @@ namespace WebApplication_Services.Service
                 userModel.ID = res + 1;
             }
             else userModel.ID = 1;
-
+            // Hash
+            var hash = SecurePasswordHasher.Hash(userModel.Password);
+            userModel.Password = hash;
+            
             repo.Users.Add(userModel);
             return Task.FromResult(userModel);
         }
@@ -59,7 +63,7 @@ namespace WebApplication_Services.Service
 
         public Task<bool> ValidateUser(string userName, string password)
         {
-            var res = repo.Users.Where(e => e.Email == userName && e.Password == password).FirstOrDefault();
+            var res = repo.Users.Where(e => e.Email == userName && SecurePasswordHasher.Verify(password, e.Password)).FirstOrDefault();
             if (res == null) return Task.FromResult(false);
             else return Task.FromResult(true);
         }
