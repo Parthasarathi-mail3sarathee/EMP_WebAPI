@@ -3,9 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Service;
+using WebApplication_Shared_Services.Contracts;
 
-namespace WebApplication1.Middleware
+
+namespace WebApplication_WebAPI.Middleware
 {
     public class LogMiddleware
     {

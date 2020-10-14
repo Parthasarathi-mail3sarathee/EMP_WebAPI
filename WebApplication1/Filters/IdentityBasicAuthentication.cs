@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading.Tasks;
-using WebApplication1.Service;
+using WebApplication_Services.Service;
 
-namespace WebApplication1.Filters
+
+namespace WebApplication_WebAPI.Filters
 {
     public class IdentityBasicAuthentication : IBaseAuth
     {

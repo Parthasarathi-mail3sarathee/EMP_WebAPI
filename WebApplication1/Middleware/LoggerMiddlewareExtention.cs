@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApplication1.Middleware
+namespace WebApplication_WebAPI.Middleware
 {
     public static class LoggerMiddlewareExtention
     {

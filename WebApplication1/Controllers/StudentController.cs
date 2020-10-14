@@ -4,12 +4,14 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using WebApplication1.Controllers.Base;
-using WebApplication1.Filters;
-using WebApplication1.Model;
-using WebApplication1.Service;
+using WebApplication_WebAPI.Controllers.Base;
+using WebApplication_WebAPI.Filters;
+using WebApplication_Services.Service;
+using WebApplication_Shared_Services.Model;
+using WebApplication_Shared_Services.Service;
+using WebApplication_Shared_Services.Contracts;
 
-namespace WebApplication1.Controllers
+namespace WebApplication_WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

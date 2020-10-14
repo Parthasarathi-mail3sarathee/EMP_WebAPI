@@ -4,9 +4,9 @@ using System.Linq;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading.Tasks;
-using WebApplication1.Model;
+using WebApplication_Shared_Services.Model;
 
-namespace WebApplication1.Filters
+namespace WebApplication_WebAPI.Filters
 {
     public interface IBaseAuth
     {

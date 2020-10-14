@@ -5,10 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebApplication1.Filters;
-using WebApplication1.Service;
+using WebApplication_WebAPI.Filters;
+using WebApplication_Services.Service;
+using WebApplication_Shared_Services.Contracts;
+using WebApplication_Shared_Services.Service;
 
-namespace WebApplication1.Controllers.Base
+namespace WebApplication_WebAPI.Controllers.Base
 {
     public class AuthBase : ControllerBase
     {

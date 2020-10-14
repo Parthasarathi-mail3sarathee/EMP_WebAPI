@@ -6,9 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using WebApplication1.Service;
+using WebApplication_Services.Service;
+using WebApplication_Shared_Services.Service;
 
-namespace WebApplication1.Filters
+namespace WebApplication_WebAPI.Filters
 {
     public class ClaimRequirementAttribute : TypeFilterAttribute
     {

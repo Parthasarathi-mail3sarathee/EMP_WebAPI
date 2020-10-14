@@ -3078,7 +3078,46 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "WebApplication1/1.0.0": {
+      "WebApplication_DBA_Layer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "WebApplication_Shared_Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebApplication_DBA_Layer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApplication_DBA_Layer.dll": {}
+        }
+      },
+      "WebApplication_Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "WebApplication_DBA_Layer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebApplication_Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApplication_Services.dll": {}
+        }
+      },
+      "WebApplication_Shared_Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "NLog.Extensions.Logging": "1.6.1"
+        },
+        "compile": {
+          "bin/placeholder/WebApplication_Shared_Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApplication_Shared_Services.dll": {}
+        }
+      },
+      "WebApplication_WebAPI/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
@@ -3086,13 +3125,15 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.4.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
           "NLog.Extensions.Logging": "1.6.1",
-          "Unity": "5.11.7"
+          "Unity": "5.11.7",
+          "WebApplication_Services": "1.0.0",
+          "WebApplication_Shared_Services": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/WebApplication1.dll": {}
+          "bin/placeholder/WebApplication_WebAPI.dll": {}
         },
         "runtime": {
-          "bin/placeholder/WebApplication1.dll": {}
+          "bin/placeholder/WebApplication_WebAPI.dll": {}
         }
       }
     }
@@ -9495,10 +9536,25 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "WebApplication1/1.0.0": {
+    "WebApplication_DBA_Layer/1.0.0": {
       "type": "project",
-      "path": "../WebApplication1/WebApplication1.csproj",
-      "msbuildProject": "../WebApplication1/WebApplication1.csproj"
+      "path": "../WebApplication_DBA_Layer/WebApplication_DBA_Layer.csproj",
+      "msbuildProject": "../WebApplication_DBA_Layer/WebApplication_DBA_Layer.csproj"
+    },
+    "WebApplication_Services/1.0.0": {
+      "type": "project",
+      "path": "../WebApplication_Services/WebApplication_Services.csproj",
+      "msbuildProject": "../WebApplication_Services/WebApplication_Services.csproj"
+    },
+    "WebApplication_Shared_Services/1.0.0": {
+      "type": "project",
+      "path": "../WebApplication_Shared_Services/WebApplication_Shared_Services.csproj",
+      "msbuildProject": "../WebApplication_Shared_Services/WebApplication_Shared_Services.csproj"
+    },
+    "WebApplication_WebAPI/1.0.0": {
+      "type": "project",
+      "path": "../WebApplication1/WebApplication_WebAPI.csproj",
+      "msbuildProject": "../WebApplication1/WebApplication_WebAPI.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9507,7 +9563,7 @@
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "Moq >= 4.9.0",
-      "WebApplication1 >= 1.0.0",
+      "WebApplication_WebAPI >= 1.0.0",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
     ]
@@ -9542,8 +9598,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\WebApplication1\\WebApplication1.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\WebApplication1\\WebApplication1.csproj"
+            "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\WebApplication1\\WebApplication_WebAPI.csproj": {
+              "projectPath": "C:\\Users\\Admin\\source\\repos\\EMP_WebAPI\\WebApplication1\\WebApplication_WebAPI.csproj"
             }
           }
         }

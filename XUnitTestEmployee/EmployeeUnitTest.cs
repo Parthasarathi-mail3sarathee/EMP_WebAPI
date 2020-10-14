@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading;
-using WebApplication1.Controllers;
-using WebApplication1.Model;
-using WebApplication1.Service;
+using WebApplication_Services.Service;
+using WebApplication_Shared_Services.Model;
+using WebApplication_WebAPI.Controllers;
 using Xunit;
 
 namespace XUnit_Employee_TestProject1

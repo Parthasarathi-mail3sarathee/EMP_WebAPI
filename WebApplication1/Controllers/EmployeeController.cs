@@ -4,12 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Service;
-using WebApplication1.Model;
+using WebApplication_Services.Service;
+using WebApplication_Shared_Services.Model;
 using System.Threading;
 using Microsoft.AspNetCore.Cors;
 
-namespace WebApplication1.Controllers
+namespace WebApplication_WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

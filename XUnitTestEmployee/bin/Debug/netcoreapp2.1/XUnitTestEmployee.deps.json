@@ -10,7 +10,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.1.1",
           "Microsoft.NET.Test.Sdk": "15.9.0",
-          "WebApplication1": "1.0.0",
+          "WebApplication_WebAPI": "1.0.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
         },
@@ -2166,15 +2166,59 @@
           "Microsoft.NET.Test.Sdk": "15.9.0"
         }
       },
-      "WebApplication1/1.0.0": {
+      "WebApplication_DBA_Layer/1.0.0": {
+        "dependencies": {
+          "WebApplication_Shared_Services": "1.0.0"
+        },
+        "runtime": {
+          "WebApplication_DBA_Layer.dll": {}
+        }
+      },
+      "WebApplication_Services/1.0.0": {
+        "dependencies": {
+          "WebApplication_DBA_Layer": "1.0.0",
+          "Microsoft.IdentityModel.Tokens": "5.2.0.0",
+          "System.IdentityModel.Tokens.Jwt": "5.2.0.0"
+        },
+        "runtime": {
+          "WebApplication_Services.dll": {}
+        }
+      },
+      "WebApplication_Shared_Services/1.0.0": {
+        "dependencies": {
+          "NLog.Extensions.Logging": "1.6.1"
+        },
+        "runtime": {
+          "WebApplication_Shared_Services.dll": {}
+        }
+      },
+      "WebApplication_WebAPI/1.0.0": {
         "dependencies": {
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.4.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
           "NLog.Extensions.Logging": "1.6.1",
-          "Unity": "5.11.7"
+          "Unity": "5.11.7",
+          "WebApplication_Services": "1.0.0",
+          "WebApplication_Shared_Services": "1.0.0"
         },
         "runtime": {
-          "WebApplication1.dll": {}
+          "WebApplication_WebAPI.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Tokens.Reference/5.2.0.0": {
+        "runtime": {
+          "Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.50129"
+          }
+        }
+      },
+      "System.IdentityModel.Tokens.Jwt.Reference/5.2.0.0": {
+        "runtime": {
+          "System.IdentityModel.Tokens.Jwt.dll": {
+            "assemblyVersion": "5.2.0.0",
+            "fileVersion": "5.2.0.50129"
+          }
         }
       }
     }
@@ -3361,8 +3405,33 @@
       "path": "xunit.runner.visualstudio/2.4.0",
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
     },
-    "WebApplication1/1.0.0": {
+    "WebApplication_DBA_Layer/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebApplication_Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebApplication_Shared_Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebApplication_WebAPI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.IdentityModel.Tokens.Reference/5.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IdentityModel.Tokens.Jwt.Reference/5.2.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

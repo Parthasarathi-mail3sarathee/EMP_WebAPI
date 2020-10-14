@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\bin\Debug\netcoreapp2.1\WebApplication_DBA_Layer.deps.json
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\bin\Debug\netcoreapp2.1\WebApplication_DBA_Layer.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\bin\Debug\netcoreapp2.1\WebApplication_DBA_Layer.pdb
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\bin\Debug\netcoreapp2.1\WebApplication_Shared_Services.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\bin\Debug\netcoreapp2.1\WebApplication_Shared_Services.pdb
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\obj\Debug\netcoreapp2.1\WebApplication_DBA_Layer.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\obj\Debug\netcoreapp2.1\WebApplication_DBA_Layer.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\obj\Debug\netcoreapp2.1\WebApplication_DBA_Layer.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\obj\Debug\netcoreapp2.1\WebApplication_DBA_Layer.AssemblyInfo.cs
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\obj\Debug\netcoreapp2.1\WebApplication_DBA_Layer.csproj.CopyComplete
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\obj\Debug\netcoreapp2.1\WebApplication_DBA_Layer.dll
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_DBA_Layer\obj\Debug\netcoreapp2.1\WebApplication_DBA_Layer.pdb

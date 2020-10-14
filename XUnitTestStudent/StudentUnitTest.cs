@@ -1,14 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading;
-using WebApplication1.Controllers;
-using WebApplication1.Model;
-using WebApplication1.Service;
 using Xunit;
 using Moq;
 using Microsoft.AspNetCore.Http;
-using WebApplication1.Filters;
 using System.Threading.Tasks;
+using WebApplication_Shared_Services.Service;
+using WebApplication_Services.Service;
+using WebApplication_WebAPI.Filters;
+using WebApplication_WebAPI.Controllers;
+using WebApplication_Shared_Services.Model;
 
 namespace XUnit_Student_TestProject1
 {
@@ -32,15 +33,15 @@ namespace XUnit_Student_TestProject1
         [Fact]
         public async void GetAll_Student_Return_Ok()
         {
-            //Arrange  
-            var controller = new StudentController(_logger.Object,_studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
-            CancellationToken ct;
+           // //Arrange  
+           // var controller = new StudentController(_logger.Object,_studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
+           // CancellationToken ct;
 
-            //Act  
-           // var data = await controller.GetAll(ct);
+           // //Act  
+           //var data = await controller.GetAll(ct);
 
-            //Assert  
-           // Assert.IsType<OkObjectResult>(data);
+           // //Assert  
+           //Assert.IsType<OkObjectResult>(data);
         }
 
         [Fact]

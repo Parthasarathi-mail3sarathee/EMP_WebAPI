@@ -15,9 +15,12 @@ using Microsoft.Extensions.Options;
 using NLog;
 using Unity;
 using Unity.Lifetime;
-using WebApplication1.Filters;
-using WebApplication1.Middleware;
-using WebApplication1.Service;
+using WebApplication_WebAPI.Filters;
+using WebApplication_WebAPI.Middleware;
+using WebApplication_Services.Service;
+using WebApplication_Shared_Services.Service;
+using WebApplication_Shared_Services.Model;
+using WebApplication_Shared_Services.Contracts;
 
 namespace WebApplication1
 {
