@@ -37,9 +37,12 @@ namespace WebApplication_DBA_Layer.DB
             UserRoles.Add(new UserRole { ID = 5, roleID = 5, userID = 1 });// Name = "Raju"
 
             //User Info  
-            Users.Add(new User { ID = 3,  Name = "Sankar", Password = "student", Email = "sankar@test.com", IsActive = true });
-            Users.Add(new User { ID = 2,  Name = "Raman", Password = "Lead", Email = "test@test.com", IsActive = true });
-            Users.Add(new User { ID = 1,  Name = "Raju", Password = "Teacher", Email = "test1@test.com", IsActive = true });
+            //Password = "student"
+            Users.Add(new User { ID = 3,  Name = "Sankar", Password = "$MYHASH$V1$10000$FgmAy/FK2WM16yUegb2kZg28NsvuI2Hs8DqFNl9/1U9rBLZN", Email = "sankar@test.com", IsActive = true });
+            //Password = "Lead"
+            Users.Add(new User { ID = 2,  Name = "Raman", Password = "$MYHASH$V1$10000$MbQju3j+kx2kFWGFW7+9eMR9349K0bK4Sx5i4hfEGOqpbYIV", Email = "test@test.com", IsActive = true });
+            //Password = "Teacher"
+            Users.Add(new User { ID = 1,  Name = "Raju", Password = "$MYHASH$V1$10000$dCK1B9K44bExIgsBSVBh8u9dY03ptfIZpiEbhjbIB9R9ZshE", Email = "test1@test.com", IsActive = true });
     
         }
 

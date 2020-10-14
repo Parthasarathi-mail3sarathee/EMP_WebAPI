@@ -6,3 +6,4 @@ C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_Shared_Services\obj\Debug\
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_Shared_Services\obj\Debug\netcoreapp2.1\WebApplication_Shared_Services.AssemblyInfo.cs
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_Shared_Services\obj\Debug\netcoreapp2.1\WebApplication_Shared_Services.dll
 C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_Shared_Services\obj\Debug\netcoreapp2.1\WebApplication_Shared_Services.pdb
+C:\Users\Admin\source\repos\EMP_WebAPI\WebApplication_Shared_Services\obj\Debug\netcoreapp2.1\WebApplication_Shared_Services.csprojAssemblyReference.cache

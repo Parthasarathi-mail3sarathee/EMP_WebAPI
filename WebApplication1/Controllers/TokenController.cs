@@ -32,10 +32,19 @@ namespace WebApplication_WebAPI.Controllers
             if (CheckUser(login.username, login.password))
             {
                 var tok = await _authService.GenerateToken(login.username);
-                return Ok(new { token =  tok});
+                return Ok(new { token = tok });
             }
 
             return Unauthorized();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("RegisterUser")]
+        public async Task<IActionResult> RegisterUser(User user)
+        {
+            var registereduser = await _authService.RegisterUser(user);
+            return Ok(registereduser);
         }
 
         public bool CheckUser(string username, string password)
