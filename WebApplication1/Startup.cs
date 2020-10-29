@@ -43,6 +43,11 @@ namespace WebApplication1
                 c.AddPolicy("AllowAllHeaders", options => options.AllowAnyOrigin().AllowAnyHeader()
                            .AllowAnyMethod());
             });
+
+            services.AddTransient<IOperationTransient, Operation>();
+            services.AddScoped<IOperationScoped, Operation>();
+            services.AddSingleton<IOperationSingleton, Operation>();
+            services.AddScoped<IScopeService, ScopeService>(); 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<ILoggerManager, LoggerManager>();
             services.AddTransient<ILogHeaders, LogHeaders>();

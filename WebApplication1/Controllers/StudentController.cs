@@ -24,7 +24,9 @@ namespace WebApplication_WebAPI.Controllers
         private readonly IStudentService _studentService;
 
 
-        public StudentController(ILoggerManager logger, IStudentService studentService, IHttpContextAccessor httpContextAccessor, IBaseAuth baseAuth) : base(logger, httpContextAccessor, baseAuth)
+
+        public StudentController(ILoggerManager logger,
+                      IStudentService studentService, IHttpContextAccessor httpContextAccessor, IBaseAuth baseAuth) : base(logger, httpContextAccessor, baseAuth)
         {
             _studentService = studentService;
             _logger = logger;
@@ -44,6 +46,7 @@ namespace WebApplication_WebAPI.Controllers
             _logger.LogWarn("Here is warn message from the controller.");
             _logger.LogError("Here is error message from the controller.");
 
+
             var studinfo = await _studentService.GetAllStudentAsync(ct);
             if (studinfo == null)
             {
@@ -57,7 +60,7 @@ namespace WebApplication_WebAPI.Controllers
         [Route("GetByID/{id}")]
         public async Task<IActionResult> GeByID(int id, CancellationToken ct)
         {
-            var studinfo = await _studentService.GetStudentByIDAsync(id,ct);
+            var studinfo = await _studentService.GetStudentByIDAsync(id, ct);
             if (studinfo == null)
             {
                 return NotFound();
@@ -86,7 +89,7 @@ namespace WebApplication_WebAPI.Controllers
             {
                 return BadRequest(ModelState);
             }
-            var empinfo = await _studentService.UpdateStudent(id,value, ct);
+            var empinfo = await _studentService.UpdateStudent(id, value, ct);
             return Ok(empinfo);
         }
 
@@ -102,5 +105,7 @@ namespace WebApplication_WebAPI.Controllers
             var result = await _studentService.DeleteStudent(id, ct);
             return NoContent();
         }
+
+       
     }
 }

@@ -5,16 +5,32 @@ using System.Threading;
 using System.Threading.Tasks;
 using WebApplication_Shared_Services.Model;
 using WebApplication_DBA_Layer.DB;
+using WebApplication_Shared_Services.Service;
 
 namespace WebApplication_Services.Service
 {
     public sealed class StudentService : IStudentService
     {
         public SingletonStudentRepo repo { get; set; }
-        public StudentService()
+        
+
+        private readonly IOperationTransient _transientOperation;
+        private readonly IOperationSingleton _singletonOperation;
+        private readonly IOperationScoped _scopedOperation;
+
+
+        public StudentService(
+
+                      IOperationTransient transientOperation,
+                      IOperationScoped scopedOperation,
+                      IOperationSingleton singletonOperation
+                      )
         {
             repo = SingletonStudentRepo.Instance;
-          
+
+            _transientOperation = transientOperation;
+            _scopedOperation = scopedOperation;
+            _singletonOperation = singletonOperation;
         }
 
         public Task<List<Student>> GetAllStudentAsync(CancellationToken ct)
@@ -63,5 +79,14 @@ namespace WebApplication_Services.Service
             return Task.FromResult(false);
         }
 
+        public Task<string>  GetTrancientScopedSingleton()
+        {
+
+            string str = "{ ServiceMethod: { Transient: " + _transientOperation.OperationId + " "
+                          + ", Scoped: " + _scopedOperation.OperationId + " "
+                          + ", Singleton: " + _singletonOperation.OperationId + " } ";
+
+            return Task.FromResult(str); ;
+        }
     }
 }
