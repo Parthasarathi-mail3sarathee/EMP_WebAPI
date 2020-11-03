@@ -10,6 +10,7 @@ using WebApplication_Services.Service;
 using WebApplication_Shared_Services.Model;
 using WebApplication_Shared_Services.Service;
 using WebApplication_Shared_Services.Contracts;
+using Microsoft.Extensions.Logging;
 
 namespace WebApplication_WebAPI.Controllers
 {
@@ -21,13 +22,16 @@ namespace WebApplication_WebAPI.Controllers
     {
 
         private readonly ILoggerManager _logger;
+
+        private readonly ILogger<StudentController> _logger_1;
         private readonly IStudentService _studentService;
 
 
 
-        public StudentController(ILoggerManager logger,
+        public StudentController(ILogger<StudentController> logger_1, ILoggerManager logger,
                       IStudentService studentService, IHttpContextAccessor httpContextAccessor, IBaseAuth baseAuth) : base(logger, httpContextAccessor, baseAuth)
         {
+            _logger_1 = logger_1;
             _studentService = studentService;
             _logger = logger;
         }
@@ -40,6 +44,9 @@ namespace WebApplication_WebAPI.Controllers
             var permission = new List<string>() { "Leader", "Teacher", "Staff", "SuperUser" };
             var msg = await base.AuthenticationAndAuthorization(permission);
             if (msg != "Success") return Unauthorized();
+
+            _logger_1.LogDebug(1, "NLog injected into HomeController");
+            _logger_1.LogInformation("NLog injected into HomeController");
 
             _logger.LogInfo("Here is info message from the controller.");
             _logger.LogDebug("Here is debug message from the controller.");
