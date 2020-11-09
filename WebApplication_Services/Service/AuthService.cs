@@ -110,15 +110,23 @@ namespace WebApplication_Services.Service
                 JwtSecurityToken jwtToken = (JwtSecurityToken)tokenHandler.ReadToken(token);
                 if (jwtToken == null) return null;
                 byte[] keybyte = Encoding.UTF8.GetBytes(key);
+
+                var IssuerSigningKey = new SymmetricSecurityKey(keybyte);
+                var SigningCredentials = new SigningCredentials(
+                    IssuerSigningKey,
+                    SecurityAlgorithms.HmacSha256Signature);
+
+                var tokenSecure = tokenHandler.ReadToken(token) as SecurityToken;
+
                 TokenValidationParameters parameters = new TokenValidationParameters()
                 {
                     RequireExpirationTime = true,
                     ValidateIssuer = false,
                     ValidateAudience = false,
-                    IssuerSigningKey = new SymmetricSecurityKey(keybyte)
+                    IssuerSigningKey = IssuerSigningKey,
+                    ValidateIssuerSigningKey = true,
                 };
-                SecurityToken securityToken;
-                ClaimsPrincipal principal = tokenHandler.ValidateToken(token, parameters, out securityToken);
+                ClaimsPrincipal principal = tokenHandler.ValidateToken(token, parameters, out tokenSecure);
                 return principal;
             }
             catch (Exception ex)

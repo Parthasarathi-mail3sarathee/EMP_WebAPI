@@ -22,19 +22,20 @@ namespace WebApplication_WebAPI.Filters
     public class ClaimRequirementFilter : IAuthorizationFilter
     {
         readonly string[] _claim;
-        private readonly IBaseAuth _baseAuth;
-        private readonly ILoggerManager _logger;
+        //private readonly ILoggerManager _logger;
 
         public ClaimRequirementFilter(string[] claim)
         {
             _claim = claim;
-            _logger = new LoggerManager();
-            _baseAuth = new IdentityBasicAuthentication(new AuthService(_logger));
+            //_logger = new LoggerManager();
+            //_baseAuth = new IdentityBasicAuthentication(new AuthService(_logger));
         }
 
         public void OnAuthorization(AuthorizationFilterContext context)
         {
             string msg;
+            var _logger = (ILoggerManager)context.HttpContext.RequestServices.GetService(typeof(ILoggerManager));
+            var _baseAuth = (IBaseAuth)context.HttpContext.RequestServices.GetService(typeof(IBaseAuth));
             var accessToken = context.HttpContext.Request.Headers["Authorization"];
             var userPrincpal =  _baseAuth.AuthenticateJwtToken(accessToken).Result;
             if (userPrincpal == null)

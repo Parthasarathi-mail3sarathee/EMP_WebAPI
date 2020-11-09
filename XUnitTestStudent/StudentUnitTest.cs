@@ -10,6 +10,7 @@ using WebApplication_Services.Service;
 using WebApplication_WebAPI.Filters;
 using WebApplication_WebAPI.Controllers;
 using WebApplication_Shared_Services.Model;
+using Microsoft.Extensions.Logging;
 
 namespace XUnit_Student_TestProject1
 {
@@ -19,6 +20,7 @@ namespace XUnit_Student_TestProject1
         private Mock<IStudentService> _studentService;
         private Mock<IHttpContextAccessor> _httpContextAccessor;
         private Mock<IBaseAuth> _baseAuth;
+        private Mock<ILogger<StudentController>> _logger_1;
 
         public StudentUnitTestController()
         {
@@ -26,9 +28,9 @@ namespace XUnit_Student_TestProject1
             _studentService = new Mock<IStudentService>();
             _httpContextAccessor = new Mock<IHttpContextAccessor>();
             _baseAuth = new Mock<IBaseAuth>();
+            _logger_1 = new Mock<ILogger<StudentController>>();
 
-
-        }
+    }
 
         [Fact]
         public async void GetAll_Student_Return_Ok()
@@ -48,7 +50,7 @@ namespace XUnit_Student_TestProject1
         public void GeByID_Student_Return_Ok()
         {
             //Arrange  
-            var controller = new StudentController(_logger.Object, _studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
+            var controller = new StudentController(_logger_1.Object ,_logger.Object, _studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
             CancellationToken ct;
             int id = 1;
             Student stud = new Student() { ID = 1, Name = "RAM", Address = "Chennai", Email = "ram@test.com", Role = "Stud" };
@@ -68,7 +70,7 @@ namespace XUnit_Student_TestProject1
         public  void GeByID_Student_Return_NotFoundResult()
         {
             //Arrange  
-            var controller = new StudentController(_logger.Object, _studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
+            var controller = new StudentController(_logger_1.Object, _logger.Object, _studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
             CancellationToken ct;
             int id = 4;
             _studentService.Setup(x => x.GetStudentByIDAsync(id, ct)).Returns(Task.FromResult<Student>(null));
@@ -84,7 +86,7 @@ namespace XUnit_Student_TestProject1
         public async void GeByID_Student_Return_MatchResult()
         {
             //Arrange  
-            var controller = new StudentController(_logger.Object, _studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
+            var controller = new StudentController(_logger_1.Object, _logger.Object, _studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
             CancellationToken ct;
             int id = 2;
             Student stud = new Student() { ID = 2, Name = "RAM", Address = "Chennai", Email = "ram@test.com", Role = "Stud" };
