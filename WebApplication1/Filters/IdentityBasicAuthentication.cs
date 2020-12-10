@@ -55,9 +55,9 @@ namespace WebApplication_WebAPI.Filters
                     // in order to build local identity
 
                     var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, username)
-                };
+                    {
+                        new Claim(ClaimTypes.Name, username)
+                    };
 
                     // Add more claims if needed: Roles, ...
                     var rle = await _authService.GetUserRoles(username);

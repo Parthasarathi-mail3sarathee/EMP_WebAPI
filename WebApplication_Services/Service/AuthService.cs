@@ -112,9 +112,8 @@ namespace WebApplication_Services.Service
                 byte[] keybyte = Encoding.UTF8.GetBytes(key);
 
                 var IssuerSigningKey = new SymmetricSecurityKey(keybyte);
-                var SigningCredentials = new SigningCredentials(
-                    IssuerSigningKey,
-                    SecurityAlgorithms.HmacSha256Signature);
+
+                var credentials = new SigningCredentials(IssuerSigningKey, SecurityAlgorithms.HmacSha256);
 
                 var tokenSecure = tokenHandler.ReadToken(token) as SecurityToken;
 
@@ -124,7 +123,7 @@ namespace WebApplication_Services.Service
                     ValidateIssuer = false,
                     ValidateAudience = false,
                     IssuerSigningKey = IssuerSigningKey,
-                    ValidateIssuerSigningKey = true,
+                    ValidateIssuerSigningKey = true
                 };
                 ClaimsPrincipal principal = tokenHandler.ValidateToken(token, parameters, out tokenSecure);
                 return principal;

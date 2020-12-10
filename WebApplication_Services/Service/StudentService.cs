@@ -13,7 +13,6 @@ namespace WebApplication_Services.Service
     {
         public SingletonStudentRepo repo { get; set; }
         
-
         private readonly IOperationTransient _transientOperation;
         private readonly IOperationSingleton _singletonOperation;
         private readonly IOperationScoped _scopedOperation;
