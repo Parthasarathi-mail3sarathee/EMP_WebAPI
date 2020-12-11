@@ -106,5 +106,26 @@ namespace XUnit_Student_TestProject1
             Assert.Equal(stud.Address, studres.Address);
 
         }
+
+        [Fact]
+        public async void AddStudent_Return_BadRequest_ModalValidationn()
+        {
+
+            // Arrange
+            var controller = new StudentController(_logger_1.Object, _logger.Object, _studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
+            CancellationToken ct;
+            controller.ModelState.AddModelError("fakeError", "fakeError");
+            Student stud = new Student() { ID = 3, Address = "Chennai", Email = "ram@", Role = "Stud" };
+            _studentService.Setup(x => x.AddStudent(stud, ct)).Returns(Task.FromResult(stud));
+
+            // Act
+            var response = await controller.AddStudent(stud,ct);
+
+            // Assert
+            //Assert.Null(response);
+            Assert.IsType<BadRequestObjectResult>(response);
+        }
+
+      
     }
 }
