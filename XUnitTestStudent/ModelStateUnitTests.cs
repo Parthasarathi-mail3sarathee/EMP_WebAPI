@@ -35,18 +35,18 @@ namespace XUnitTestStudent
         public void Unit_Test_CarModel_ModelState_validations_are_thrown()
         {
             // Arrange 
-            var controller = new ModelStateTestController();
+            //var controller = new ModelStateTestController();
 
 
-            Student stud = new Student() { ID = 3, Address = "Chennai", Email = "ram@", Role = "Stud" };
+            //Student stud = new Student() { ID = 3, Address = "Chennai", Email = "ram@", Role = "Stud" };
 
             // Act
-            var result = controller.TestTryValidateModel(stud);
+            //var result = controller.TestTryValidateModel(stud);
 
             // Assert
             //Assert.IsFalse(result);
 
-            var modelState = controller.ModelState;
+            //var modelState = controller.ModelState;
 
            // Assert.AreEqual(2, modelState.Keys.Count);
 

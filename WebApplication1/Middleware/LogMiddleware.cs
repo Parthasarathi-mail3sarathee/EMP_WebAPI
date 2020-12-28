@@ -26,8 +26,27 @@ namespace WebApplication_WebAPI.Middleware
         {
             _logger.WriteLog("Log Started");
             HeaderLog(context);
-            await _next.Invoke(context);
-            _logger.WriteLogComplete();
+            // *Permission for each user
+            // *Restrict user with Antiforgery token
+            // * IP address - userinfo - antifogery token - permission
+            // * sensitive
+            // * entry point should have encripted token.
+            // check valid token and valid result. var result = await _signInManager.
+           bool checkResult = true;
+            if (checkResult) //if (result.IsSuccess)
+            {
+                await _next.Invoke(context);
+                _logger.WriteLogComplete();
+            }
+            else
+            {
+                context.Response.Clear();
+                context.Response.StatusCode = 401; //UnAuthorized
+                await context.Response.WriteAsync("Invalid User Key");
+                _logger.WriteLogComplete();
+                return;
+            }
+            
         }
 
         private void HeaderLog(HttpContext context)

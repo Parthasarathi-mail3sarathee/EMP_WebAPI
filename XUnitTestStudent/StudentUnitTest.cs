@@ -32,19 +32,7 @@ namespace XUnit_Student_TestProject1
 
     }
 
-        [Fact]
-        public async void GetAll_Student_Return_Ok()
-        {
-           // //Arrange  
-           // var controller = new StudentController(_logger.Object,_studentService.Object, _httpContextAccessor.Object, _baseAuth.Object);
-           // CancellationToken ct;
-
-           // //Act  
-           //var data = await controller.GetAll(ct);
-
-           // //Assert  
-           //Assert.IsType<OkObjectResult>(data);
-        }
+       
 
         [Fact]
         public void GeByID_Student_Return_Ok()
