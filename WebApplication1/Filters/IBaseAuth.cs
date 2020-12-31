@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
+﻿using System.Collections.Generic;
 using System.Security.Principal;
 using System.Threading.Tasks;
-using WebApplication_Shared_Services.Model;
 
 namespace WebApplication_WebAPI.Filters
 {

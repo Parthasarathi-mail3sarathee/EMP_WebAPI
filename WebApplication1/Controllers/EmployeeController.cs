@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading;
+using System.Threading.Tasks;
 using WebApplication_Services.Service;
 using WebApplication_Shared_Services.Model;
-using System.Threading;
-using Microsoft.AspNetCore.Cors;
 
 namespace WebApplication_WebAPI.Controllers
 {
@@ -83,7 +79,7 @@ namespace WebApplication_WebAPI.Controllers
             {
                 return NotFound();
             }
-            var result = await _employeeService.DeleteEmployee(id, ct);
+            await _employeeService.DeleteEmployee(id, ct);
             return NoContent();
         }
     }

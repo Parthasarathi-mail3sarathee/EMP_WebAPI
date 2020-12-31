@@ -1,26 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using NLog;
-using Unity;
-using Unity.Lifetime;
+using System;
+using System.IO;
+using WebApplication_Services.Service;
+using WebApplication_Shared_Services.Contracts;
+using WebApplication_Shared_Services.Service;
 using WebApplication_WebAPI.Filters;
 using WebApplication_WebAPI.Middleware;
-using WebApplication_Services.Service;
-using WebApplication_Shared_Services.Service;
-using WebApplication_Shared_Services.Model;
-using WebApplication_Shared_Services.Contracts;
 
 namespace WebApplication1
 {
@@ -47,7 +38,9 @@ namespace WebApplication1
             services.AddTransient<IOperationTransient, Operation>();
             services.AddScoped<IOperationScoped, Operation>();
             services.AddSingleton<IOperationSingleton, Operation>();
-            services.AddScoped<IScopeService, ScopeService>(); 
+            services.AddScoped<IScopeService, ScopeService>();
+
+            services.AddTransient<IBaseAuth, BaseAuth>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSingleton<ILoggerManager, LoggerManager>();
             services.AddTransient<ILogHeaders, LogHeaders>();

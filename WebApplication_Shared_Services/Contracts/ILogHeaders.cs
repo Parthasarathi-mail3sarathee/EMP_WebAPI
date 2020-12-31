@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace WebApplication_Shared_Services.Contracts
+﻿namespace WebApplication_Shared_Services.Contracts
 {
     public interface ILogHeaders
     {

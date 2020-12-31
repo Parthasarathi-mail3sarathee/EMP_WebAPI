@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
-using Moq;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
-using WebApplication_WebAPI.Filters;
-using WebApplication_Shared_Services.Service;
-using System.Threading.Tasks;
-using System.Security.Principal;
+using Moq;
+using System;
+using System.Collections.Generic;
 using System.Security.Claims;
+using System.Security.Principal;
+using System.Threading.Tasks;
+using WebApplication_Shared_Services.Service;
+using WebApplication_WebAPI.Filters;
+using Xunit;
 
 namespace XUnitTestStudent
 {

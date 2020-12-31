@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using WebApplication_Shared_Services.Model;
 
 namespace WebApplication_DBA_Layer.DB

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using WebApplication_Shared_Services.Model;
 using WebApplication_DBA_Layer.DB;
+using WebApplication_Shared_Services.Model;
 using WebApplication_Shared_Services.Service;
 
 namespace WebApplication_Services.Service
@@ -38,7 +37,7 @@ namespace WebApplication_Services.Service
         }
         public Task<Student> GetStudentByIDAsync(int id, CancellationToken ct)
         {
-            var res = repo.Students.Where(e => e.ID == id).FirstOrDefault();
+            var res = repo.Students.FirstOrDefault(e => e.ID == id);
             return Task.FromResult(res);
         }
         public Task<Student> AddStudent(Student value, CancellationToken ct)
@@ -58,7 +57,7 @@ namespace WebApplication_Services.Service
         public Task<Student> UpdateStudent(int id, Student value, CancellationToken ct)
         {
 
-            var res = repo.Students.Where(e => e.ID == id).FirstOrDefault();
+            var res = repo.Students.FirstOrDefault(e => e.ID == id);
             value.ID = res.ID;
             repo.Students.Remove(res);
             repo.Students.Add(value);
@@ -68,7 +67,7 @@ namespace WebApplication_Services.Service
 
         public Task<bool> DeleteStudent(int id, CancellationToken ct)
         {
-            var res = repo.Students.Where(e => e.ID == id).FirstOrDefault();
+            var res = repo.Students.FirstOrDefault(e => e.ID == id);
             if (res != null)
             {
                 repo.Students.Remove(res);
@@ -85,7 +84,7 @@ namespace WebApplication_Services.Service
                           + ", Scoped: " + _scopedOperation.OperationId + " "
                           + ", Singleton: " + _singletonOperation.OperationId + " } ";
 
-            return Task.FromResult(str); ;
+            return Task.FromResult(str); 
         }
     }
 }

@@ -1,16 +1,15 @@
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading;
-using Xunit;
-using Moq;
 using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
-using WebApplication_Shared_Services.Service;
-using WebApplication_Services.Service;
-using WebApplication_WebAPI.Filters;
-using WebApplication_WebAPI.Controllers;
-using WebApplication_Shared_Services.Model;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Moq;
+using System.Threading;
+using System.Threading.Tasks;
+using WebApplication_Services.Service;
+using WebApplication_Shared_Services.Model;
+using WebApplication_Shared_Services.Service;
+using WebApplication_WebAPI.Controllers;
+using WebApplication_WebAPI.Filters;
+using Xunit;
 
 namespace XUnit_Student_TestProject1
 {

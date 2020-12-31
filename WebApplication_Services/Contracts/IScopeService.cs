@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using WebApplication_Shared_Services.Model;
+﻿using System.Threading.Tasks;
 
 namespace WebApplication_Services.Service
 {

@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using WebApplication_Shared_Services.Contracts;
 
 namespace WebApplication_Shared_Services.Service
 {
-   
+
     public  class LogHeaders: ILogHeaders
     {
-        static string fileName = @"F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\logs\logHeader_Each_Request_" + DateTime.Now.ToString("dd_MM_yy") + ".txt";
+        private  string fileName = AppDomain.CurrentDomain.GetData("ContentRootPath") +"\\logs\\logHeader_Each_Request_" + DateTime.Now.ToString("dd_MM_yy") + ".txt";
       
         public LogHeaders()
         {

@@ -1,20 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Primitives;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using WebApplication_WebAPI.Filters;
-using WebApplication_Services.Service;
-using WebApplication_Shared_Services.Contracts;
 using WebApplication_Shared_Services.Service;
+using WebApplication_WebAPI.Filters;
 
 namespace WebApplication_WebAPI.Controllers.Base
 {
     public class AuthBase : ControllerBase
     {
-        private IHttpContextAccessor _httpContextAccessor;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IBaseAuth _baseAuth;
         private readonly ILoggerManager _logger;
         public AuthBase(ILoggerManager logger, IHttpContextAccessor httpContextAccessor, IBaseAuth baseAuth)
@@ -51,23 +46,19 @@ namespace WebApplication_WebAPI.Controllers.Base
 
         public string GetRemoteIP()
         {
-            ProcessIP._httpContextAccessor = this._httpContextAccessor;
-            return ProcessIP.GetRequestIP();
+            return _httpContextAccessor.GetRequestIP();
         }
         public string GetUserAgent()
         {
-            ProcessIP._httpContextAccessor = this._httpContextAccessor;
-            return ProcessIP.UserAgent();
+            return _httpContextAccessor.UserAgent();
         }
         public string GetUserLanguage()
         {
-            ProcessIP._httpContextAccessor = this._httpContextAccessor;
-            return ProcessIP.ClientLanguage();
+            return _httpContextAccessor.ClientLanguage();
         }
         public void GetUnknown()
         {
-            ProcessIP._httpContextAccessor = this._httpContextAccessor;
-            ProcessIP.Unknown();
+            _httpContextAccessor.Unknown();
         }
 
     }

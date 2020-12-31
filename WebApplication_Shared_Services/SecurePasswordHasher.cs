@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace WebApplication_Shared_Services
 {
@@ -26,8 +24,8 @@ namespace WebApplication_Shared_Services
         public static string Hash(string password, int iterations)
         {
             // Create salt
-            byte[] salt;
-            new RNGCryptoServiceProvider().GetBytes(salt = new byte[SaltSize]);
+            byte[] salt= new byte[SaltSize];
+            new RNGCryptoServiceProvider().GetBytes(salt);
 
             // Create hash
             var pbkdf2 = new Rfc2898DeriveBytes(password, salt, iterations);

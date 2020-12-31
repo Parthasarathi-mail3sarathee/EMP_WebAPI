@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Threading;
 using WebApplication_Services.Service;
 using WebApplication_Shared_Services.Model;

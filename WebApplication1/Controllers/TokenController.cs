@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using WebApplication_Services.Service;
 using WebApplication_Shared_Services.Model;
@@ -50,8 +47,8 @@ namespace WebApplication_WebAPI.Controllers
         public bool CheckUser(string username, string password)
         {
             // should check in the database
-            var valid = _authService.ValidateUser(username, password);
-            return true;
+            var valid = _authService.ValidateUser(username, password).Result;
+            return valid;
         }
     }
 }

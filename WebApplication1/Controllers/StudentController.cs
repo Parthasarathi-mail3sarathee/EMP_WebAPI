@@ -1,16 +1,15 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using WebApplication_WebAPI.Controllers.Base;
-using WebApplication_WebAPI.Filters;
 using WebApplication_Services.Service;
 using WebApplication_Shared_Services.Model;
 using WebApplication_Shared_Services.Service;
-using WebApplication_Shared_Services.Contracts;
-using Microsoft.Extensions.Logging;
+using WebApplication_WebAPI.Controllers.Base;
+using WebApplication_WebAPI.Filters;
 
 namespace WebApplication_WebAPI.Controllers
 {
@@ -40,7 +39,7 @@ namespace WebApplication_WebAPI.Controllers
         [Route("GetAll")]
         public async Task<IActionResult> GetAll(CancellationToken ct)
         {
-            var ipaddress = base.GetRemoteIP();
+            //var ipaddress = base.GetRemoteIP();
             var permission = new List<string>() { "Leader", "Teacher", "Staff", "SuperUser" };
             var msg = await base.AuthenticationAndAuthorization(permission);
             if (msg != "Success") return Unauthorized();
@@ -109,7 +108,7 @@ namespace WebApplication_WebAPI.Controllers
             {
                 return NotFound();
             }
-            var result = await _studentService.DeleteStudent(id, ct);
+            await _studentService.DeleteStudent(id, ct);
             return NoContent();
         }
 

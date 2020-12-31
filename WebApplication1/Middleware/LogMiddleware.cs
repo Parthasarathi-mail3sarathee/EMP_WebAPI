@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using WebApplication_Shared_Services.Contracts;
-
+using WebApplication_WebAPI.Filters;
 
 namespace WebApplication_WebAPI.Middleware
 {
@@ -12,11 +10,10 @@ namespace WebApplication_WebAPI.Middleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogHeaders _logger;
-        static string fileName;
       
         public LogMiddleware(RequestDelegate next, ILogHeaders logger)
         {
-            fileName = @"F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\logs\Middleware_logHeader_Each_Request_" + DateTime.Now.ToString("dd_MM_yy") + ".txt";
+            var fileName = AppDomain.CurrentDomain.GetData("ContentRootPath") +"\\logs\\Middleware_logHeader_Each_Request_" + DateTime.Now.ToString("dd_MM_yy") + ".txt";
             _next = next;
             _logger = logger;
             _logger.setFileLog(fileName);
@@ -32,8 +29,12 @@ namespace WebApplication_WebAPI.Middleware
             // * sensitive
             // * entry point should have encripted token.
             // check valid token and valid result. var result = await _signInManager.
-           bool checkResult = true;
-            if (checkResult) //if (result.IsSuccess)
+            var accessToken = context.Request.Headers["Authorization"];
+            bool userRigths = false;
+            /// var userRigths = _baseAuth.AuthorizeUserClaim(userPrincpal, _claim.ToList());
+            if (accessToken != string.Empty) userRigths = true;
+            //bool checkResult = true;
+            if (userRigths) //if (result.IsSuccess)
             {
                 await _next.Invoke(context);
                 _logger.WriteLogComplete();
@@ -44,7 +45,6 @@ namespace WebApplication_WebAPI.Middleware
                 context.Response.StatusCode = 401; //UnAuthorized
                 await context.Response.WriteAsync("Invalid User Key");
                 _logger.WriteLogComplete();
-                return;
             }
             
         }

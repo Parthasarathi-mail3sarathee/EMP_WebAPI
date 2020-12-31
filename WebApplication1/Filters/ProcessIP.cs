@@ -1,24 +1,22 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Primitives;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using WebApplication_Shared_Services.Service;
 
 namespace WebApplication_WebAPI.Filters
 {
     public static class ProcessIP
     {
-        static string fileName = @"F:\Partha\Code\Emp\EmployeeWebAPI\WebApplication1\logs\logHeader_Each_Request_" + DateTime.Now.ToString("dd_MM_yy") + ".txt";
         private static LogHeaders log;
         static ProcessIP()
         {
-            log = new LogHeaders(fileName);
+            log = new LogHeaders(AppDomain.CurrentDomain.GetData("ContentRootPath") + "\\logs\\logHeader_Each_Request_" + DateTime.Now.ToString("dd_MM_yy") + ".txt");
         }
-        public static IHttpContextAccessor _httpContextAccessor;
 
-        public static string GetRequestIP(bool tryUseXForwardHeader = true)
+        public static string GetRequestIP(this IHttpContextAccessor _httpContextAccessor, bool tryUseXForwardHeader = true)
         {
             string ip = null;
 
@@ -30,19 +28,19 @@ namespace WebApplication_WebAPI.Filters
             // http://stackoverflow.com/a/43554000/538763
             //
             if (tryUseXForwardHeader)
-                ip = GetHeaderValueAs<string>("X-Forwarded-For").SplitCsv().FirstOrDefault();
+                ip = _httpContextAccessor.GetHeaderValueAs<string>("X-Forwarded-For").SplitCsv().FirstOrDefault();
 
             // RemoteIpAddress is always null in DNX RC1 Update1 (bug).
             if (ip.IsNullOrWhitespace() && _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress != null)
                 ip = _httpContextAccessor.HttpContext.Connection.RemoteIpAddress.ToString();
 
             if (ip.IsNullOrWhitespace())
-                ip = GetHeaderValueAs<string>("REMOTE_ADDR");
+                ip = _httpContextAccessor.GetHeaderValueAs<string>("REMOTE_ADDR");
 
             // _httpContextAccessor.HttpContext?.Request?.Host this is the local host.
 
-            if (ip.IsNullOrWhitespace())
-                throw new Exception("Unable to determine caller's IP.");
+            if (ip.IsNullOrWhitespace()) 
+                    throw new AccessViolationException("Unable to determine caller's IP.");
 
             return ip;
         }
@@ -52,28 +50,27 @@ namespace WebApplication_WebAPI.Filters
             throw new NotImplementedException();
         }
 
-        public static string ClientLanguage(bool tryUseXForwardHeader = true)
+        public static string ClientLanguage(this IHttpContextAccessor _httpContextAccessor, bool tryUseXForwardHeader = true)
         {
             string lang = null;
             if (tryUseXForwardHeader)
-                lang = GetHeaderValueAs<string>("Accept-Language").SplitCsv().FirstOrDefault();
+                lang = _httpContextAccessor.GetHeaderValueAs<string>("Accept-Language").SplitCsv().FirstOrDefault();
             return lang;
 
         }
 
-        public static string UserAgent(bool tryUseXForwardHeader = true)
+        public static string UserAgent(this IHttpContextAccessor _httpContextAccessor, bool tryUseXForwardHeader = true)
         {
             string useragent = null;
             if (tryUseXForwardHeader)
-                useragent = GetHeaderValueAs<string>("User-Agent").SplitCsv().FirstOrDefault();
+                useragent = _httpContextAccessor.GetHeaderValueAs<string>("User-Agent").SplitCsv().FirstOrDefault();
             return useragent;
 
         }
 
 
-        public static void Unknown(bool tryUseXForwardHeader = true)
+        public static void Unknown(this IHttpContextAccessor _httpContextAccessor, bool tryUseXForwardHeader = true)
         {
-            var headercount= _httpContextAccessor.HttpContext?.Request?.Headers?.Count;
             foreach(var key in _httpContextAccessor.HttpContext?.Request?.Headers?.Keys)
             {
                 log.WriteLog(DateTime.Now.ToString("dd_MM_yy_hh_mm_ss")+" " +key + " : " + _httpContextAccessor.HttpContext?.Request?.Headers[key].ToString());
@@ -83,7 +80,7 @@ namespace WebApplication_WebAPI.Filters
             
 
         }
-        public static T GetHeaderValueAs<T>(string headerName)
+        public static T GetHeaderValueAs<T>(this IHttpContextAccessor _httpContextAccessor, string headerName)
         {
             StringValues values;
             //User Languages var languages = Request.Headers["Accept-Language"];

@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using WebApplication_Services.Service;
-using WebApplication_Shared_Services.Model;
 using WebApplication_Shared_Services.Service;
 using WebApplication_WebAPI.Controllers;
 using WebApplication_WebAPI.Filters;

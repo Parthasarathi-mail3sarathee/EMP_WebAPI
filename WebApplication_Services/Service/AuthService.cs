@@ -43,7 +43,7 @@ namespace WebApplication_Services.Service
 
         public Task<List<Role>> GetUserRoles(string userName)
         {
-            var resuser = repo.Users.Where(u => u.Email == userName).FirstOrDefault();
+            var resuser = repo.Users.FirstOrDefault(u => u.Email == userName);
             var resuseRole = repo.UserRoles.Where(ur => ur.userID == resuser.ID);
 
             var rle = from ur in resuseRole
@@ -57,13 +57,13 @@ namespace WebApplication_Services.Service
 
         public Task<User> FindUser(string userName, string password)
         {
-            var res = repo.Users.Where(e => e.Email == userName && e.Password == password).FirstOrDefault();
+            var res = repo.Users.FirstOrDefault(e => e.Email == userName && e.Password == password);
             return Task.FromResult(res);
         }
 
         public Task<bool> ValidateUser(string userName, string password)
         {
-            var res = repo.Users.Where(e => e.Email == userName && SecurePasswordHasher.Verify(password, e.Password)).FirstOrDefault();
+            var res = repo.Users.FirstOrDefault(e => e.Email == userName && SecurePasswordHasher.Verify(password, e.Password));
             if (res == null) return Task.FromResult(false);
             else return Task.FromResult(true);
         }
@@ -98,7 +98,7 @@ namespace WebApplication_Services.Service
             {
                 _logger.LogError("Message: "+ ex.Message);
                 _logger.LogError("StackTrace: " + ex.StackTrace);
-                return null;
+                return Task.FromResult<string>(null);
             }
         }
 
@@ -126,6 +126,8 @@ namespace WebApplication_Services.Service
                     ValidateIssuerSigningKey = true
                 };
                 ClaimsPrincipal principal = tokenHandler.ValidateToken(token, parameters, out tokenSecure);
+
+                _logger.LogInfo(tokenSecure.ToString());
                 return principal;
             }
             catch (Exception ex)

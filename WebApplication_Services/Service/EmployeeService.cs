@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using WebApplication_Shared_Services.Model;
 using WebApplication_DBA_Layer.DB;
+using WebApplication_Shared_Services.Model;
 
 namespace WebApplication_Services.Service
 {
@@ -23,7 +22,7 @@ namespace WebApplication_Services.Service
         }
         public Task<Employee> GetEmployeeByIDAsync(int id, CancellationToken ct)
         {
-            var res = repo.Employees.Where(e => e.ID == id).FirstOrDefault();
+            var res = repo.Employees.FirstOrDefault(e => e.ID == id);
             return Task.FromResult(res);
         }
         public Task<Employee> AddEmployee(Employee value, CancellationToken ct)
@@ -43,7 +42,7 @@ namespace WebApplication_Services.Service
         public Task<Employee> UpdateEmployee(int id, Employee value, CancellationToken ct)
         {
 
-            var res = repo.Employees.Where(e => e.ID == id).FirstOrDefault();
+            var res = repo.Employees.FirstOrDefault(e => e.ID == id);
             value.ID = res.ID;
             repo.Employees.Remove(res);
             repo.Employees.Add(value);
@@ -53,7 +52,7 @@ namespace WebApplication_Services.Service
 
         public Task<bool> DeleteEmployee(int id, CancellationToken ct)
         {
-            var res = repo.Employees.Where(e => e.ID == id).FirstOrDefault();
+            var res = repo.Employees.FirstOrDefault(e => e.ID == id);
             if (res != null)
             {
                 repo.Employees.Remove(res);

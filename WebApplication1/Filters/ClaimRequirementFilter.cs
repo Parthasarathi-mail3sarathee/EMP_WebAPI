@@ -1,12 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using WebApplication_Services.Service;
 using WebApplication_Shared_Services.Service;
 
 namespace WebApplication_WebAPI.Filters
@@ -33,21 +28,20 @@ namespace WebApplication_WebAPI.Filters
 
         public void OnAuthorization(AuthorizationFilterContext context)
         {
-            string msg;
+            string msg = "Unauthorized User credentials is not a valid";
             var _logger = (ILoggerManager)context.HttpContext.RequestServices.GetService(typeof(ILoggerManager));
             var _baseAuth = (IBaseAuth)context.HttpContext.RequestServices.GetService(typeof(IBaseAuth));
             var accessToken = context.HttpContext.Request.Headers["Authorization"];
             var userPrincpal =  _baseAuth.AuthenticateJwtToken(accessToken).Result;
             if (userPrincpal == null)
             {
-                msg = "Unauthorized User credentials is not a valid";
-                ProcessIP._httpContextAccessor = new HttpContextAccessor();
-                ProcessIP._httpContextAccessor.HttpContext = context.HttpContext;
+                var _httpContextAccessor = new HttpContextAccessor();
+                _httpContextAccessor.HttpContext = context.HttpContext;
                 _logger.LogWarn(msg);
-                _logger.LogWarn("Remote IP Client: " + ProcessIP.GetRequestIP());
-                _logger.LogWarn("client useragent: " + ProcessIP.UserAgent());
-                _logger.LogWarn("client language: " + ProcessIP.ClientLanguage());
-                ProcessIP.Unknown();//log custom header in a log file log unauthorized request of each Header of Each Request
+                _logger.LogWarn("Remote IP Client: " + _httpContextAccessor.GetRequestIP());
+                _logger.LogWarn("client useragent: " + _httpContextAccessor.UserAgent());
+                _logger.LogWarn("client language: " + _httpContextAccessor.ClientLanguage());
+                _httpContextAccessor.Unknown();//log custom header in a log file log unauthorized request of each Header of Each Request
                 _logger.LogError(msg);
                 context.Result = new UnauthorizedResult();
                 return;
@@ -55,7 +49,6 @@ namespace WebApplication_WebAPI.Filters
             var userRigths =  _baseAuth.AuthorizeUserClaim(userPrincpal, _claim.ToList());
             if (!userRigths)
             {
-                msg = "Unauthorized User access to the resource is not a valid";
                 context.Result = new NoContentResult();
                 return;
             }
