@@ -19,6 +19,20 @@ Implementations are
 
 •	Xunit , MOQ unit testing.
 
+https://www.codeproject.com/Articles/291562/Asp-net-web-application-Security-Review-Dos-Dont
+
+https://www.c-sharpcorner.com/article/sonarqube-configuration-for-net-core-web-api/
+
+https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-msbuild/
+
+https://cheatsheetseries.owasp.org/cheatsheets/DotNet_Security_Cheat_Sheet.html
+
+
+
+
+
+ASP.NET web application security review: Do's & Don'tsThis article helps you to build and enable robust web applications with respect to various aspects of security that needs to be taken care of while designing a system.www.codeproject.com
+
 
 It is a singleton in memory database 
 https://github.com/Parthasarathi-mail3sarathee/EMP_WebAPI/tree/master/WebApplication1/DB
